@@ -15,7 +15,7 @@ function CreateTasks() {
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:3001/task/create`, create)
+            const response = await axios.post(`https://todo-list-65xp.onrender.com/task/create`, create)
             return response
         } catch (error) {
             alert("error al crear la tarea")

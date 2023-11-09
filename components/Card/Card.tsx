@@ -17,7 +17,7 @@ function Card(props: Task) {
                 .then(async (willDelete) => {
                     if (willDelete) {
                         // El usuario confirmó la eliminación, entonces aquí puedes eliminar la tarea
-                        const response = await axios.delete(`http://localhost:3001/task/eliminar/${props.id}`);
+                        const response = await axios.delete(`https://todo-list-65xp.onrender.com/task/eliminar/${props.id}`);
                         if (response.status === 200) {
                             // Tarea eliminada con éxito
                             swal("Listo, tarea eliminada!", {

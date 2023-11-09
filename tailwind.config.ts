@@ -12,7 +12,7 @@ const config: Config = {
       "slate":"#94a3b8",
       "slate1":"#1e293b",
       "rojo":"#dc2626",
-      "white": "#fffff"
+      "white": "#ffffff"
     },
     extend: {
       backgroundImage: {

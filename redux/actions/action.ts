@@ -7,7 +7,7 @@ import { Dispatch } from 'react';
 
 export const getTasks = ():any => {
     return async function (dispatch: Dispatch<GetTasksAction>) {
-        const apiTask = await axios("http://localhost:3001/task/");
+        const apiTask = await axios("https://todo-list-65xp.onrender.com/task/");
         const task = apiTask.data;
         
         //* payload la informacion que mandamos a los reducer:
