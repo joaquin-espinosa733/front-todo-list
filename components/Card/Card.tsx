@@ -45,6 +45,8 @@ function Card(props: Task) {
             <div className=' flex flex-col justify-center  text-center'>
                 <h1>{props.title}</h1><br />
                 <p>{props.description}</p><br />
+                <br />
+                <p>Mas detalles</p>
                 <button className=" bg-rojo rounded-md" onClick={handleDeleteClick}>eliminar tarea</button>
             </div>
         </div>
