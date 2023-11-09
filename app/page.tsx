@@ -7,11 +7,11 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main>
-      <section className="flex flex-col items-center h-0">
-        <Cards />
-      </section>
-      <NavBar />
+    <main className='flex flex-row'>
+        <NavBar />
+        <div className=" flex flex-col items-center w-full mx-48">
+            <Cards />
+        </div>
     </main>
-  )
+);
 }

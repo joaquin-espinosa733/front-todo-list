@@ -41,7 +41,7 @@ function Card(props: Task) {
     }, [])
 
     return (
-        <div className='  bg-slate text-black rounded-md flex justify-center flex-col w-36 p-1 m-1'>
+        <div className='  bg-slate text-negro rounded-md flex justify-center flex-col w-56 p-1 m-1'>
             <div className=' flex flex-col justify-center  text-center'>
                 <h1>{props.title}</h1><br />
                 <p>{props.description}</p><br />

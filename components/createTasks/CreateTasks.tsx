@@ -15,7 +15,12 @@ function CreateTasks() {
     const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`https://todo-list-65xp.onrender.com/task/create`, create)
+            const response = await axios.post(`https://todo-list-65xp.onrender.com/task/create`, create);
+            setCreate({
+                title: "",
+                description: "",
+                done: false
+            });
             return response
         } catch (error) {
             alert("error al crear la tarea")
@@ -51,7 +56,7 @@ function CreateTasks() {
                 <br />
                 <label htmlFor="">Descripcion de la tarea:</label>
                 <br />
-                <textarea cols={30} rows={10} className=" rounded-md"  name='description' value={create.description} onChange={handleTextAreaChange} placeholder='coloca la descripcion...'></textarea>
+                <textarea cols={30} rows={10} className=" rounded-md" name='description' value={create.description} onChange={handleTextAreaChange} placeholder='coloca la descripcion...'></textarea>
                 <br />
                 <label htmlFor="">Estado:</label>
                 <br />

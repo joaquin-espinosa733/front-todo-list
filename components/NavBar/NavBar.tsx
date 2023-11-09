@@ -7,15 +7,16 @@ import Link from 'next/link';
 
 function NavBar() {
 
-    const sidebarStyles = {
-        width: "250px",
+    const sidebarStyles: React.CSSProperties = {
         backgroundColor: 'white',
-        borderRightWidth: "0", // Establece el borde derecho a 0 para quitarlo
+        borderRightWidth: "0",
         margin: 0,
+        position: 'fixed',
+        height: '100%',
     };
-
+    
     return (
-        <Sidebar style={sidebarStyles} collapsed={false} className='h-screen w-screen'>
+        <Sidebar style={sidebarStyles} collapsed={false} width='200px'>
             <Menu>
                 <MenuItem component={<Link href="/"></Link>} icon={<CiGrid41 />}> Tareas </MenuItem>
                 <MenuItem component={<Link href="/create"></Link>} icon={<CiEdit />}> Crear tarea </MenuItem>
@@ -35,7 +36,6 @@ function NavBar() {
                 </h3>
             </div>
         </Sidebar >
-
     )
 }
 
