@@ -3,8 +3,12 @@ import React, { useEffect } from 'react'
 import { Task } from '@/interfaces/interfaces'
 import axios from 'axios';
 import swal from 'sweetalert';
+import { useDispatch } from 'react-redux';
+import { getTasks } from '@/redux/actions/action';
 
 function Card(props: Task) {
+    const dispatch = useDispatch();
+
     const handleDeleteClick = async () => {
         try {
             swal({
@@ -38,8 +42,9 @@ function Card(props: Task) {
     };
 
     useEffect(() => {
-    }, [])
-
+        handleDeleteClick
+        dispatch(getTasks());
+    }, [dispatch, handleDeleteClick]);
     return (
         <div className='  bg-slate text-negro rounded-md flex justify-center flex-col w-56 p-1 m-1'>
             <div className=' flex flex-col justify-center  text-center'>
